@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life | Kevin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Kevin.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="life.html">Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>Life Beyond Research</h1>
+      <p>A curated collection of the things that make life interesting &mdash; travel, food, hobbies, and everything in between.</p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="gallery-filters animate-on-scroll">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="hobbies">Hobbies</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid stagger-children">
+
+        <!-- Travel items -->
+        <div class="gallery-item animate-on-scroll" data-category="travel">
+          <div class="gallery-placeholder travel">&#9992;</div>
+          <div class="gallery-caption">
+            <h4>Tokyo, Japan</h4>
+            <p>Lost in the neon glow of Shibuya crossing</p>
+            <span class="gallery-tag">Travel</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="food">
+          <div class="gallery-placeholder food">&#127858;</div>
+          <div class="gallery-caption">
+            <h4>Homemade Ramen</h4>
+            <p>12-hour tonkotsu broth &mdash; worth every minute</p>
+            <span class="gallery-tag">Food</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="hobbies">
+          <div class="gallery-placeholder hobbies">&#127952;</div>
+          <div class="gallery-caption">
+            <h4>Weekend Hiking</h4>
+            <p>Eno River Trail on a foggy Saturday morning</p>
+            <span class="gallery-tag">Hobbies</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="travel">
+          <div class="gallery-placeholder travel">&#127963;</div>
+          <div class="gallery-caption">
+            <h4>Barcelona, Spain</h4>
+            <p>Gaudi's masterpieces never get old</p>
+            <span class="gallery-tag">Travel</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="food">
+          <div class="gallery-placeholder food">&#9749;</div>
+          <div class="gallery-caption">
+            <h4>Pour-Over Mornings</h4>
+            <p>The ritual that starts every productive day</p>
+            <span class="gallery-tag">Food</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="hobbies">
+          <div class="gallery-placeholder hobbies">&#128218;</div>
+          <div class="gallery-caption">
+            <h4>Reading List</h4>
+            <p>Current obsession: behavioral economics meets sci-fi</p>
+            <span class="gallery-tag">Hobbies</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="travel">
+          <div class="gallery-placeholder travel">&#127956;</div>
+          <div class="gallery-caption">
+            <h4>Banff, Canada</h4>
+            <p>Turquoise lakes and impossible mountain views</p>
+            <span class="gallery-tag">Travel</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="food">
+          <div class="gallery-placeholder food">&#127835;</div>
+          <div class="gallery-caption">
+            <h4>Durham Food Scene</h4>
+            <p>Exploring the best BBQ spots in the Triangle</p>
+            <span class="gallery-tag">Food</span>
+          </div>
+        </div>
+
+        <div class="gallery-item animate-on-scroll" data-category="hobbies">
+          <div class="gallery-placeholder hobbies">&#127911;</div>
+          <div class="gallery-caption">
+            <h4>Vinyl Collection</h4>
+            <p>Nothing beats the crackle of a good record</p>
+            <span class="gallery-tag">Hobbies</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <div class="lightbox-content"></div>
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">&copy; 2026 Kevin. Built with curiosity.</p>
+      <div class="footer-socials">
+        <a href="mailto:your.email@duke.edu" aria-label="Email">&#9993;</a>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar">&#127891;</a>
+        <a href="https://github.com/Kevin2330" target="_blank" rel="noopener" aria-label="GitHub">&#128736;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
