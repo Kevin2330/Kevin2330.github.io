@@ -1,0 +1,252 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --color-text: #2d3436;
+  --color-text-light: #636e72;
+  --color-accent: #1a3a5c;
+  --color-accent-light: #2d6da8;
+  --color-border: #dfe6e9;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --max-width: 900px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a { color: var(--color-accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Navbar ── */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--color-accent);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.nav-brand {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.nav-brand:hover { text-decoration: none; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,.85);
+  font-size: .9rem;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav-links a:hover { color: #fff; text-decoration: none; }
+
+/* ── Hero / About ── */
+.hero {
+  padding: 72px 0 64px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-content {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text { flex: 1; }
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+  color: var(--color-accent);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--color-accent-light);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.affiliation {
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+}
+
+.bio {
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.hero-links { display: flex; gap: 12px; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: .9rem;
+  transition: background .2s;
+}
+.btn:hover { background: var(--color-accent-light); text-decoration: none; color: #fff; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.btn-outline:hover { background: var(--color-accent); color: #fff; }
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.photo-placeholder {
+  width: 180px;
+  height: 220px;
+  background: var(--color-bg-alt);
+  border: 2px dashed var(--color-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-size: .9rem;
+}
+
+/* ── Sections ── */
+.section { padding: 56px 0; }
+.section-alt { background: var(--color-bg-alt); }
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  margin-bottom: 28px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+/* ── Research ── */
+.research-category { margin-bottom: 32px; }
+.research-category h3 {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.paper-list { list-style: none; }
+.paper-list li {
+  margin-bottom: 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--color-accent-light);
+}
+
+.paper-title {
+  font-weight: 600;
+  display: block;
+}
+
+.paper-authors {
+  font-size: .9rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.paper-abstract {
+  margin-top: 4px;
+  font-size: .92rem;
+  color: var(--color-text-light);
+}
+
+/* ── Teaching ── */
+.teaching-list {
+  list-style: none;
+}
+.teaching-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── CV ── */
+.cv-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.cv-block h3 {
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.cv-block ul {
+  list-style: none;
+}
+.cv-block li {
+  padding: 4px 0;
+  font-size: .95rem;
+}
+
+/* ── Contact ── */
+.contact-address {
+  margin-top: 12px;
+  color: var(--color-text-light);
+  font-size: .95rem;
+}
+
+/* ── Footer ── */
+.footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero-content { flex-direction: column-reverse; text-align: center; }
+  .hero-links { justify-content: center; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: .8rem; }
+  .cv-summary { grid-template-columns: 1fr; }
+}
