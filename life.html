@@ -8,6 +8,82 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .location-section { margin-bottom: 64px; }
+    .location-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .location-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--text-primary);
+    }
+    .location-header .location-count {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: var(--accent-glow);
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .photo-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .photo-card:hover img { transform: scale(1.05); }
+    .region-divider {
+      text-align: center;
+      margin: 80px 0 48px;
+      position: relative;
+    }
+    .region-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border);
+    }
+    .region-divider span {
+      position: relative;
+      background: var(--bg-primary);
+      padding: 0 24px;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    @media (max-width: 480px) {
+      .photo-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+    }
+  </style>
 </head>
 <body class="page-top">
 
@@ -19,7 +95,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="cv.html">CV</a></li>
-<li><a href="life.html">Life</a></li>
+        <li><a href="life.html">Life</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
@@ -33,7 +109,7 @@
   <div class="page-hero">
     <div class="container">
       <h1>Life Beyond Research</h1>
-      <p>A curated collection of the things that make life interesting &mdash; travel, food, hobbies, and everything in between.</p>
+      <p>A collection of moments from my travels and adventures &mdash; organized by the places that made them special.</p>
     </div>
   </div>
 
@@ -41,100 +117,301 @@
   <section class="section">
     <div class="container">
 
-      <!-- Filters -->
-      <div class="gallery-filters animate-on-scroll">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="travel">Travel</button>
-        <button class="filter-btn" data-filter="food">Food</button>
-        <button class="filter-btn" data-filter="hobbies">Hobbies</button>
+      <!-- ═══ CALIFORNIA ═══ -->
+      <div class="region-divider animate-on-scroll"><span>California</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Los Angeles</h3>
+          <span class="location-count">12 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0036.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0040.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0041.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_4381.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5592.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6270.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6276.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6279.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6280.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6281.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6393.jpeg" alt="Los Angeles" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_7130.jpeg" alt="Los Angeles" loading="lazy"></div>
+        </div>
       </div>
 
-      <!-- Gallery Grid -->
-      <div class="gallery-grid stagger-children">
-
-        <!-- Travel items -->
-        <div class="gallery-item animate-on-scroll" data-category="travel">
-          <div class="gallery-placeholder travel">&#9992;</div>
-          <div class="gallery-caption">
-            <h4>Tokyo, Japan</h4>
-            <p>Lost in the neon glow of Shibuya crossing</p>
-            <span class="gallery-tag">Travel</span>
-          </div>
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>San Diego</h3>
+          <span class="location-count">11 photos</span>
         </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="food">
-          <div class="gallery-placeholder food">&#127858;</div>
-          <div class="gallery-caption">
-            <h4>Homemade Ramen</h4>
-            <p>12-hour tonkotsu broth &mdash; worth every minute</p>
-            <span class="gallery-tag">Food</span>
-          </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/79DE7C1C-86E8-4178-88B2-20BE47BC4D34.jpeg" alt="Balboa Park, San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2508.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2510.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2519.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2576.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2580.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2587.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2588.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_3378.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_4255.jpeg" alt="San Diego" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_4258.jpeg" alt="San Diego" loading="lazy"></div>
         </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="hobbies">
-          <div class="gallery-placeholder hobbies">&#127952;</div>
-          <div class="gallery-caption">
-            <h4>Weekend Hiking</h4>
-            <p>Eno River Trail on a foggy Saturday morning</p>
-            <span class="gallery-tag">Hobbies</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="travel">
-          <div class="gallery-placeholder travel">&#127963;</div>
-          <div class="gallery-caption">
-            <h4>Barcelona, Spain</h4>
-            <p>Gaudi's masterpieces never get old</p>
-            <span class="gallery-tag">Travel</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="food">
-          <div class="gallery-placeholder food">&#9749;</div>
-          <div class="gallery-caption">
-            <h4>Pour-Over Mornings</h4>
-            <p>The ritual that starts every productive day</p>
-            <span class="gallery-tag">Food</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="hobbies">
-          <div class="gallery-placeholder hobbies">&#128218;</div>
-          <div class="gallery-caption">
-            <h4>Reading List</h4>
-            <p>Current obsession: behavioral economics meets sci-fi</p>
-            <span class="gallery-tag">Hobbies</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="travel">
-          <div class="gallery-placeholder travel">&#127956;</div>
-          <div class="gallery-caption">
-            <h4>Banff, Canada</h4>
-            <p>Turquoise lakes and impossible mountain views</p>
-            <span class="gallery-tag">Travel</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="food">
-          <div class="gallery-placeholder food">&#127835;</div>
-          <div class="gallery-caption">
-            <h4>Durham Food Scene</h4>
-            <p>Exploring the best BBQ spots in the Triangle</p>
-            <span class="gallery-tag">Food</span>
-          </div>
-        </div>
-
-        <div class="gallery-item animate-on-scroll" data-category="hobbies">
-          <div class="gallery-placeholder hobbies">&#127911;</div>
-          <div class="gallery-caption">
-            <h4>Vinyl Collection</h4>
-            <p>Nothing beats the crackle of a good record</p>
-            <span class="gallery-tag">Hobbies</span>
-          </div>
-        </div>
-
       </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>San Francisco Bay Area</h3>
+          <span class="location-count">8 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0043.jpeg" alt="San Francisco" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0089.jpeg" alt="San Francisco" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0094.jpeg" alt="San Francisco" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0101.jpeg" alt="San Francisco" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0114.jpeg" alt="San Francisco" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0144.jpeg" alt="Bay Area" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0153.jpeg" alt="Bay Area" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_9754.jpeg" alt="Bay Area" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Yosemite National Park</h3>
+          <span class="location-count">4 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_5854.jpeg" alt="Yosemite" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5886.jpeg" alt="Yosemite" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5907.jpeg" alt="Yosemite" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5923.jpeg" alt="Yosemite" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Death Valley National Park</h3>
+          <span class="location-count">8 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_6632.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6682.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6686.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6698.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6702.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6720.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6743.jpeg" alt="Death Valley" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6781.jpeg" alt="Death Valley" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Joshua Tree &amp; SoCal Desert</h3>
+          <span class="location-count">3 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/C6ACBC3F-839E-4150-AFD5-288B70548F64.jpeg" alt="Joshua Tree" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_6533.jpeg" alt="Orange County" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/A5AECCE0-C449-4D8A-8A59-022EE4FEA7B4.jpeg" alt="Desert off-roading" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ SOUTHWEST ROADTRIP ═══ -->
+      <div class="region-divider animate-on-scroll"><span>The Southwest</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>White Sands &amp; El Paso, NM/TX</h3>
+          <span class="location-count">11 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0352.jpeg" alt="El Paso" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0354.jpeg" alt="El Paso" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0359.jpeg" alt="El Paso" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0416.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0424.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0441.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0447.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0470.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0471.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0472.jpeg" alt="White Sands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0477.jpeg" alt="New Mexico" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>New Mexico Roadtrip</h3>
+          <span class="location-count">4 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0509.jpeg" alt="Albuquerque" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0561.jpeg" alt="Petrified Forest" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0562.jpeg" alt="Petrified Forest" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5378.jpeg" alt="New Mexico" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Moab &amp; Arches, Utah</h3>
+          <span class="location-count">7 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0791.jpeg" alt="Moab" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0835.jpeg" alt="Arches" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0911.jpeg" alt="Canyonlands" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0928.jpeg" alt="Utah" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0931.jpeg" alt="Utah" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0965.jpeg" alt="Utah" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_3506.jpeg" alt="Utah red rocks" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Antelope Canyon &amp; Page, Arizona</h3>
+          <span class="location-count">1 photo</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0802.jpeg" alt="Antelope Canyon" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Salt Lake City, Utah</h3>
+          <span class="location-count">1 photo</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0760.jpeg" alt="Salt Lake City" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ YELLOWSTONE & WYOMING ═══ -->
+      <div class="region-divider animate-on-scroll"><span>Wyoming</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Yellowstone &amp; Grand Teton</h3>
+          <span class="location-count">5 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0579.jpeg" alt="Yellowstone" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0693.jpeg" alt="Yellowstone" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0704.jpeg" alt="Yellowstone" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0718.jpeg" alt="Grand Teton" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2748.jpeg" alt="Wyoming" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ MIDWEST & EAST COAST ═══ -->
+      <div class="region-divider animate-on-scroll"><span>Midwest &amp; East Coast</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Chicago, Illinois</h3>
+          <span class="location-count">9 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0084.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0193.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_1433.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_1792.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2044.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_2171.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_8107.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_8638.jpeg" alt="Chicago" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_9173.jpeg" alt="Chicago" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>New York City</h3>
+          <span class="location-count">1 photo</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_8855.jpeg" alt="New York City" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Niagara Falls</h3>
+          <span class="location-count">3 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_8760.jpeg" alt="Niagara Falls" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_8795.jpeg" alt="Niagara Falls" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_8799.jpeg" alt="Niagara Falls" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ FLORIDA ═══ -->
+      <div class="region-divider animate-on-scroll"><span>Florida</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Miami &amp; Key West</h3>
+          <span class="location-count">3 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_2939.jpeg" alt="Miami" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_3126.jpeg" alt="Key West" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_8065.jpeg" alt="Daytona Beach" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ CHINA ═══ -->
+      <div class="region-divider animate-on-scroll"><span>China</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Sichuan</h3>
+          <span class="location-count">5 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_1170.jpeg" alt="Sichuan" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_1321.jpeg" alt="Sichuan" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_1541.jpeg" alt="Sichuan" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_1596.jpeg" alt="Sichuan" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_3614.jpeg" alt="Sichuan cave" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>Qingdao &amp; Qinghai</h3>
+          <span class="location-count">2 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_0705.jpeg" alt="Qingdao" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_5062.jpeg" alt="Qinghai" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- ═══ OTHER MOMENTS ═══ -->
+      <div class="region-divider animate-on-scroll"><span>Other Moments</span></div>
+
+      <div class="location-section animate-on-scroll">
+        <div class="location-header">
+          <h3>On the Road &amp; Everything Else</h3>
+          <span class="location-count">5 photos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card"><img src="assets/IMG_1004.jpeg" alt="Road trip sunset" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/71cc1081310d56e5ac97baa98636a890.jpeg" alt="Northern Lights" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/ec9b81d825fc78613e80248a0cc9fd5a.jpeg" alt="Winter bridge" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/1648a6b455dc804a807bcaefe00da4ad.jpeg" alt="Portrait" loading="lazy"></div>
+          <div class="photo-card"><img src="assets/IMG_0095.jpeg" alt="Key West Mile 0" loading="lazy"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -151,12 +428,28 @@
       <p class="footer-text">&copy; 2026 Kaiwen Dong. Built with curiosity.</p>
       <div class="footer-socials">
         <a href="mailto:kaiwen.dong@duke.edu" aria-label="Email">&#9993;</a>
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar">&#127891;</a>
         <a href="https://github.com/Kevin2330" target="_blank" rel="noopener" aria-label="GitHub">&#128736;</a>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Lightbox for photo cards
+    document.querySelectorAll('.photo-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var img = this.querySelector('img');
+        var lightbox = document.querySelector('.lightbox');
+        var content = lightbox.querySelector('.lightbox-content');
+        var caption = lightbox.querySelector('.lightbox-caption');
+        if (img && content) {
+          content.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '">';
+          if (caption) caption.textContent = img.alt;
+        }
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  </script>
 </body>
 </html>
