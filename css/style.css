@@ -473,6 +473,108 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
+/* ── Education Timeline ── */
+.edu-timeline {
+  position: relative;
+  max-width: 700px;
+}
+
+.edu-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.edu-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.edu-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px solid var(--text-muted);
+  flex-shrink: 0;
+  z-index: 1;
+  margin-top: 20px;
+  transition: all var(--transition);
+}
+
+.edu-dot-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.edu-connector {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  min-height: 20px;
+}
+
+.edu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  flex: 1;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+}
+
+.edu-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.edu-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.edu-degree {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.edu-dates {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .edu-line { width: 16px; }
+  .edu-card { padding: 16px; }
+  .edu-logo { width: 40px; height: 40px; }
+  .edu-info h4 { font-size: 0.92rem; }
+}
+
 /* ── Research Cards ── */
 .research-section { margin-bottom: 48px; }
 
@@ -1010,25 +1112,42 @@ img { max-width: 100%; display: block; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .navbar .container {
+    height: 56px;
+  }
+
+  .theme-toggle {
+    order: 1;
+  }
+
+  .nav-hamburger {
+    order: 2;
+  }
+
   .nav-links {
     position: fixed;
-    top: 64px;
+    top: 56px;
     left: 0;
     right: 0;
-    background: var(--bg-nav);
+    background: var(--bg-secondary);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 16px 24px;
     gap: 4px;
     border-bottom: 1px solid var(--border);
-    transform: translateY(-120%);
-    transition: transform var(--transition);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
     box-shadow: var(--shadow-md);
+    z-index: 999;
   }
 
   .nav-links.open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-hamburger {
